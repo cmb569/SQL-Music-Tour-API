@@ -4,7 +4,9 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Bands', {
       band_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
       },
       name: {
         type: Sequelize.STRING

@@ -4,12 +4,12 @@ const { DataTypes } = require('sequelize')
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.addColumn('bands', 'recommendation', {
+    await queryInterface.addColumn('Bands', 'recommendation', {
       type: DataTypes.STRING
   })
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.removeColumn('bands', 'recommendation')
+    await queryInterface.removeColumn('Bands', 'recommendation')
   }
 };
